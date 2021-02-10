@@ -1,24 +1,77 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Skillbox2_10Maps" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="h92-F9-Ntn">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </mapView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sAj-cD-OQ1">
+                                <rect key="frame" x="344" y="390" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="LeS-qW-uCp"/>
+                                    <constraint firstAttribute="width" constant="50" id="f5w-Q6-AZ7"/>
+                                </constraints>
+                                <state key="normal" image="minus.magnifyingglass" catalog="system"/>
+                                <connections>
+                                    <action selector="zoomOut:" destination="BYZ-38-t0r" eventType="touchUpInside" id="DAe-Je-FWz"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ghj-e9-Ijh">
+                                <rect key="frame" x="344" y="445" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="806-UX-jba"/>
+                                    <constraint firstAttribute="width" constant="50" id="Agc-YQ-Baj"/>
+                                </constraints>
+                                <state key="normal" image="plus.magnifyingglass" catalog="system"/>
+                                <connections>
+                                    <action selector="zoomIn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="miq-ev-oyg"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="h92-F9-Ntn" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="1Pq-XB-kCy"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="sAj-cD-OQ1" secondAttribute="trailing" constant="20" id="BJc-nQ-XXQ"/>
+                            <constraint firstItem="sAj-cD-OQ1" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" priority="999" constant="348" id="MGu-sd-qDX"/>
+                            <constraint firstItem="h92-F9-Ntn" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Qb1-L9-F7y"/>
+                            <constraint firstItem="ghj-e9-Ijh" firstAttribute="leading" secondItem="sAj-cD-OQ1" secondAttribute="leading" id="h2B-UF-ANw"/>
+                            <constraint firstAttribute="bottom" secondItem="h92-F9-Ntn" secondAttribute="bottom" id="j1i-Kj-e2m"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="sAj-cD-OQ1" secondAttribute="bottom" priority="999" constant="422" id="lfi-Vl-IOL"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="h92-F9-Ntn" secondAttribute="trailing" id="tKa-OS-NpE"/>
+                            <constraint firstItem="sAj-cD-OQ1" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" priority="999" constant="366" id="ulZ-xN-E9O"/>
+                            <constraint firstItem="ghj-e9-Ijh" firstAttribute="top" secondItem="sAj-cD-OQ1" secondAttribute="bottom" constant="5" id="xUw-P3-oP9"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="ghj-e9-Ijh" secondAttribute="bottom" priority="999" constant="384" id="zE2-RZ-Lsu"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="mapView" destination="h92-F9-Ntn" id="m7q-57-6h2"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-213.04347826086959" y="93.75"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="minus.magnifyingglass" catalog="system" width="128" height="115"/>
+        <image name="plus.magnifyingglass" catalog="system" width="128" height="115"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>

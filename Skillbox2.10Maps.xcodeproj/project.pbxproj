@@ -13,6 +13,7 @@
 		AC5970C325D0FEE0005F0E42 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC5970C125D0FEE0005F0E42 /* Main.storyboard */; };
 		AC5970C525D0FEE0005F0E42 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC5970C425D0FEE0005F0E42 /* Assets.xcassets */; };
 		AC5970C825D0FEE0005F0E42 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC5970C625D0FEE0005F0E42 /* LaunchScreen.storyboard */; };
+		AC5970D225D14799005F0E42 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC5970D125D14799005F0E42 /* LocationManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		AC5970C425D0FEE0005F0E42 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AC5970C725D0FEE0005F0E42 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AC5970C925D0FEE0005F0E42 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AC5970D125D14799005F0E42 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				AC5970C425D0FEE0005F0E42 /* Assets.xcassets */,
 				AC5970C625D0FEE0005F0E42 /* LaunchScreen.storyboard */,
 				AC5970C925D0FEE0005F0E42 /* Info.plist */,
+				AC5970D125D14799005F0E42 /* LocationManager.swift */,
 			);
 			path = Skillbox2.10Maps;
 			sourceTree = "<group>";
@@ -137,6 +140,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AC5970D225D14799005F0E42 /* LocationManager.swift in Sources */,
 				AC5970C025D0FEE0005F0E42 /* ViewController.swift in Sources */,
 				AC5970BC25D0FEE0005F0E42 /* AppDelegate.swift in Sources */,
 				AC5970BE25D0FEE0005F0E42 /* SceneDelegate.swift in Sources */,
